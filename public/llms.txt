@@ -1,0 +1,79 @@
+# Golf View Home — Generative Engine Optimization Map
+
+> Golf View Home is a residential assisted living facility located in Brentwood, California, offering personalized senior care in a warm and home-like environment. The facility is designed to provide comfort, safety, and quality of life for elderly residents who need daily assistance. The brand conveys trust, compassion, and a family-oriented atmosphere tailored to seniors and their loved ones.
+
+---
+
+## Pages
+
+### Home
+https://example.com
+Experience compassionate 24 hour care for seniors in Brentwood&#39;s warm, home-like assisted living residence. Your loved one deserves safety and family-oriented support. Schedule a visit today.
+
+### Living & Care
+https://example.com/living-care
+Explore personalized living and care options blending independent living senior care with daily assistance. A safe, nurturing Brentwood residence designed for your loved one&#39;s comfort and dignity.
+
+### About the Residence
+https://example.com/about
+Meet the heart behind Golf View Home, a trusted alternative to a maris grove senior living community. Learn how our family-oriented Brentwood residence redefines compassionate care for your loved one.
+
+### Contact
+https://example.com/contact
+Ready to secure senior housing independent living with round-the-clock support? Reach out to Golf View Home in Brentwood and let our caring team answer your questions. Call or visit us.
+
+## Legal & Policy
+
+### Privacy Policy
+https://example.com/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://example.com/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://example.com/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+## How to Contact Us
+
+- (No contact details configured yet.)
+
+### Contact form
+- URL: https://example.com/contact
+- Endpoint: https://example.com/api/email/contact-form
+- Method: POST
+- Content-Type: application/json
+- Fields:
+  - `name` (text, required)
+  - `email` (email, required)
+  - `phone` (tel)
+  - `message` (textarea, required)
+  - `privacy_consent` (checkbox, required)
+
+---
+
+# Business Context (for LLM understanding)
+
+## About Golf View Home
+Golf View Home is a residential assisted living facility located in Brentwood, California, offering personalized senior care in a warm and home-like environment. The facility is designed to provide comfort, safety, and quality of life for elderly residents who need daily assistance. The brand conveys trust, compassion, and a family-oriented atmosphere tailored to seniors and their loved ones.
+
+## Target Audience
+- Seniors and their families looking for assisted living in Brentwood, California
+- Local Seniors and Their Families
+- Adult Children Caregivers
+- Senior Healthcare Professionals
+
+## Industry
+Senior Care / Assisted Living
+
+---
+
+# Machine-readable feeds
+
+- Sitemap (XML): https://example.com/sitemap.xml
+- Robots: https://example.com/robots.txt
+- Flattened page text (for LLMs): https://example.com/llms-full.txt
