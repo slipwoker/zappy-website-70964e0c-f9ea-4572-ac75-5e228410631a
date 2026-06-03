@@ -7,33 +7,33 @@
 ## Pages
 
 ### Home
-https://example.com
+https://golf-view-home.zappy5.app
 Experience compassionate 24 hour care for seniors in Brentwood&#39;s warm, home-like assisted living residence. Your loved one deserves safety and family-oriented support. Schedule a visit today.
 
 ### Living & Care
-https://example.com/living-care
+https://golf-view-home.zappy5.app/living-care
 Explore personalized living and care options blending independent living senior care with daily assistance. A safe, nurturing Brentwood residence designed for your loved one&#39;s comfort and dignity.
 
 ### About the Residence
-https://example.com/about
+https://golf-view-home.zappy5.app/about
 Meet the heart behind Golf View Home, a trusted alternative to a maris grove senior living community. Learn how our family-oriented Brentwood residence redefines compassionate care for your loved one.
 
 ### Contact
-https://example.com/contact
+https://golf-view-home.zappy5.app/contact
 Ready to secure senior housing independent living with round-the-clock support? Reach out to Golf View Home in Brentwood and let our caring team answer your questions. Call or visit us.
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://example.com/privacy
+https://golf-view-home.zappy5.app/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://example.com/terms
+https://golf-view-home.zappy5.app/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://example.com/accessibility
+https://golf-view-home.zappy5.app/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
@@ -46,8 +46,8 @@ Information about WCAG compliance and accessibility features.
 - Address: 332 Pebble Beach Dr. , Brentwood, CA, 94513, US
 
 ### Contact form
-- URL: https://example.com/contact
-- Endpoint: https://example.com/api/email/contact-form
+- URL: https://golf-view-home.zappy5.app/contact
+- Endpoint: https://golf-view-home.zappy5.app/api/email/contact-form
 - Method: POST
 - Content-Type: application/json
 - Fields:
@@ -77,6 +77,6 @@ Senior Care / Assisted Living
 
 # Machine-readable feeds
 
-- Sitemap (XML): https://example.com/sitemap.xml
-- Robots: https://example.com/robots.txt
-- Flattened page text (for LLMs): https://example.com/llms-full.txt
+- Sitemap (XML): https://golf-view-home.zappy5.app/sitemap.xml
+- Robots: https://golf-view-home.zappy5.app/robots.txt
+- Flattened page text (for LLMs): https://golf-view-home.zappy5.app/llms-full.txt
