@@ -40,7 +40,10 @@ Information about WCAG compliance and accessibility features.
 
 ## How to Contact Us
 
-- (No contact details configured yet.)
+- Email: lorica.hipolito@yahoo.com
+- Phone: +19254185613
+- Phone (tel): tel:+19254185613
+- Address: 332 Pebble Beach Dr. , Brentwood, CA, 94513, US
 
 ### Contact form
 - URL: https://example.com/contact
