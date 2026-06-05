@@ -190,10 +190,8 @@ Your browser does not support the video tag.
 
 
 
-## Your Heading Here
 
-
-Add your text content here. This is a placeholder that you can edit.
+.
 
 
 
