@@ -50,4 +50,4 @@ Allow: /
 User-agent: MistralAI-User
 Allow: /
 
-Sitemap: https://www.golf-view-home.com/sitemap.xml
+Sitemap: https://zappy-site-70964e0c-f9ea-4572-ac75.onrender.com/sitemap.xml
