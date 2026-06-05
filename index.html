@@ -253,6 +253,284 @@
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+
+<style data-zappy-section-v2-css="true">
+/* V2 Regenerated Section CSS */
+.home-features-section {
+  position: relative;
+  overflow: visible;
+  padding: 80px 20px 80px;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.home-features-section__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Content Column */
+.home-features-section__content {
+  flex: 1 1 55%;
+  min-width: 0;
+}
+
+.home-features-section__title {
+  font-family: 'Newsreader', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin: 0 0 16px 0;
+}
+
+.home-features-section__divider {
+  width: 48px;
+  height: 4px;
+  background-color: var(--primary);
+  border-radius: 2px;
+  margin-bottom: 24px;
+  opacity: 0.8;
+}
+
+.home-features-section__intro {
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0 0 40px 0;
+  max-width: 520px;
+}
+
+/* Cards Grid */
+.home-features-section__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 580px;
+}
+
+.home-features-section__card {
+  background: #FFFFFF;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  padding: 28px 24px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  border: 1px solid var(--border-light);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.home-features-section__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+}
+
+.home-features-section__card--full {
+  grid-column: span 2;
+}
+
+.home-features-section__card-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background-color: var(--bg-light);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.home-features-section__card-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.home-features-section__card-text {
+  flex: 1;
+}
+
+.home-features-section__card-title {
+  font-family: 'Newsreader', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-dark);
+  margin: 0 0 8px 0;
+}
+
+.home-features-section__card-desc {
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Image Column */
+.home-features-section__images {
+  flex: 1 1 45%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+}
+
+.home-features-section__image-main {
+  width: 85%;
+  aspect-ratio: 3 / 4;
+  border-radius: 50% 50% 24px 24px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.12);
+  z-index: 2;
+  position: relative;
+}
+
+.home-features-section__image-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home-features-section__image-secondary {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  width: 45%;
+  aspect-ratio: 4 / 3;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+  z-index: 1;
+  border: 4px solid var(--bg-light);
+}
+
+.home-features-section__image-secondary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Decorative leaf motif */
+.home-features-section__leaf-motif {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 180px;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Bottom Divider */
+.home-features-section__divider-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.home-features-section__divider-wrapper svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-features-section {
+    padding: 60px 16px 60px;
+  }
+
+  .home-features-section__container {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  .home-features-section__title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .home-features-section__divider {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-features-section__intro {
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .home-features-section__cards {
+    grid-template-columns: 1fr !important;
+    max-width: 100%;
+  }
+
+  .home-features-section__card--full {
+    grid-column: span 1;
+  }
+
+  .home-features-section__card {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .home-features-section__card-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .home-features-section__card-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .home-features-section__images {
+    min-height: 0;
+    width: 100%;
+    justify-content: center;
+    padding: 0 10px;
+  }
+
+  .home-features-section__image-main {
+    width: 75%;
+    aspect-ratio: 3 / 4;
+    border-radius: 50% 50% 20px 20px;
+  }
+
+  .home-features-section__image-secondary {
+    width: 40%;
+    bottom: 0;
+    right: 5%;
+    border-radius: 16px;
+    border-width: 3px;
+  }
+
+  .home-features-section__leaf-motif {
+    width: 120px;
+    bottom: -15px;
+    right: -10px;
+  }
+}
+</style>
     <link rel="stylesheet" href="/styles.css">
     <script>window.ZAPPY_WEBSITE_ID = "70964e0c-f9ea-4572-ac75-5e228410631a"; window.ZAPPY_API_BASE = "https://api.zappy5.com";</script>
 
@@ -847,90 +1125,83 @@
   </div>
 </section>
 
-<section data-band-index="1" class="home-features-section" data-layout-spec="Home-features" id="home-features-section">
+<section class="home-features-section" data-layout-spec="Home-features" data-zappy-section="true" id="home-features-section">
   <div class="home-features-section__container">
     <!-- Content Column -->
     <div class="home-features-section__content">
-      <h2 class="home-features-section__heading">Why Families Choose a Home-Like Setting</h2>
+      <h2 class="home-features-section__title">Why Families Choose a Home-Like Setting</h2>
       <div class="home-features-section__divider" aria-hidden="true"></div>
-      <p class="home-features-section__paragraph" style="color: rgb(51, 45, 41) !important;">At Golf View Home, we believe that personalized attention and daily support thrive best in a warm, familiar environment. Our approach focuses on preserving dignity and independence while providing the gentle assistance your loved one needs to flourish every day.</p>
+      <p class="home-features-section__intro">At Golf View Home, we believe that personalized attention and daily support thrive best in a warm, familiar environment. Our approach focuses on preserving dignity and independence while providing the gentle assistance your loved one needs to flourish every day.</p>
       
-      <!-- Feature Cards Grid -->
-      <div class="home-features-section__cards zappy-preserve-css-grid" id="zappy-auto-grid-1780537437772-crl2nm" data-zappy-auto-grid="true" data-original-item-width="159" data-original-gap="32px" style="display: grid; --zappy-grid-cols: repeat(2, minmax(0, 1fr)); grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch !important;" data-zappy-explicit-columns="true">
-        <!-- Card 1: Individualized Assistance -->
-        <div class="home-features-section__card" data-grid-item-index="0" style="display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: stretch !important; align-self: stretch !important; height: 100% !important;">
+      <div class="home-features-section__cards">
+        <!-- Card 1 -->
+        <article class="home-features-section__card home-features-section__card--span">
           <div class="home-features-section__card-icon">
-            <svg data-element-type="icon" data-icon-type="svg" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 15C15.3137 15 18 12.3137 18 9C18 5.68629 15.3137 3 12 3C8.68629 3 6 5.68629 6 9C6 12.3137 8.68629 15 12 15Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M3 20.25C4.81594 17.6122 8.11424 16 12 16C15.8858 16 19.1841 17.6122 21 20.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <svg data-element-type="icon" data-icon-type="svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="10" r="5" stroke="currentColor" stroke-width="2"></circle>
+              <path d="M6 28c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M23 18l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
           </div>
           <div class="home-features-section__card-text">
             <h3 class="home-features-section__card-title">Individualized Assistance</h3>
-            <p class="home-features-section__card-description">Tailored care plans that adapt to each resident's unique needs, ensuring comfort and safety without compromising independence.</p>
+            <p class="home-features-section__card-desc">Tailored care plans that adapt to each resident's unique needs, ensuring comfort and safety without compromising independence.</p>
           </div>
-        </div>
-        
-        <!-- Card 2: Safe Residential Environment -->
-        <div class="home-features-section__card" data-grid-item-index="1" style="display: flex !important; flex-direction: column !important; justify-content: center !important; align-items: stretch !important; align-self: stretch !important; height: 100% !important;">
+        </article>
+
+        <!-- Card 2 -->
+        <article class="home-features-section__card home-features-section__card--span">
           <div class="home-features-section__card-icon">
-            <svg data-element-type="icon" data-icon-type="svg" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 9.5L12 3L21 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M5 8V19C5 19.5304 5.21071 20.0391 5.58579 20.4142C5.96086 20.7893 6.46957 21 7 21H17C17.5304 21 18.0391 20.7893 18.4142 20.4142C18.7893 20.0391 19 19.5304 19 19V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M10 21V15C10 14.4477 10.4477 14 11 14H13C13.5523 14 14 14.4477 14 15V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <svg data-element-type="icon" data-icon-type="svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 28V14a2 2 0 012-2h8l2-4h4v20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M16 28V8" stroke="currentColor" stroke-width="2"></path>
+              <path d="M22 28V12" stroke="currentColor" stroke-width="2"></path>
+              <circle cx="22" cy="8" r="2" fill="currentColor"></circle>
             </svg>
           </div>
           <div class="home-features-section__card-text">
-            <h3 class="home-features-section__card-title" >Safe Residential Environment</h3>
-            <p class="home-features-section__card-description" style="text-align: left;">A secure, intimate home designed with accessibility in mind, offering peace of mind for families and a familiar setting for residents.</p>
+            <h3 class="home-features-section__card-title">Safe Residential Environment</h3>
+            <p class="home-features-section__card-desc">A secure, intimate home designed with accessibility in mind, offering peace of mind for families and a familiar setting for residents.</p>
           </div>
-        </div>
-        
-        <!-- Card 3: Warm Companionship (spans full width on desktop for 2-over-1 layout) -->
-        <div class="home-features-section__card home-features-section__card--full" data-grid-item-index="2">
+        </article>
+
+        <!-- Card 3 (spans full width on desktop) -->
+        <article class="home-features-section__card home-features-section__card--full">
           <div class="home-features-section__card-icon">
-            <svg data-element-type="icon" data-icon-type="svg" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17 20.6618C18.5297 19.5294 19.5722 17.9292 20 16.1111C20.4278 14.293 20.2199 12.3895 19.4083 10.7092C18.5967 9.02892 17.229 7.67193 15.5203 6.8451C13.8116 6.01828 11.8605 5.76746 10 6.13111" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M17 16.5C16.5 13.5 15 12 12 12C9 12 7.5 13.5 7 16.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-              <circle cx="12" cy="9" r="2.25" stroke="currentColor" stroke-width="1.5"></circle>
+            <svg data-element-type="icon" data-icon-type="svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 28c6.627 0 12-5.373 12-12S22.627 4 16 4 4 9.373 4 16s5.373 12 12 12z" stroke="currentColor" stroke-width="2"></path>
+              <path d="M10 16c0 3.314 2.686 6 6 6s6-2.686 6-6-2.686-6-6-6-6 2.686-6 6z" stroke="currentColor" stroke-width="2"></path>
+              <circle cx="16" cy="16" r="2" fill="currentColor"></circle>
             </svg>
           </div>
           <div class="home-features-section__card-text">
             <h3 class="home-features-section__card-title">Warm Companionship</h3>
-            <p class="home-features-section__card-description">We foster meaningful connections and daily social engagement, creating a family-oriented atmosphere where every resident feels valued and at home.</p>
+            <p class="home-features-section__card-desc">We foster meaningful connections and daily social engagement, creating a family-oriented atmosphere where every resident feels valued and at home.</p>
           </div>
-        </div>
+        </article>
       </div>
     </div>
-    
+
     <!-- Image Column -->
     <div class="home-features-section__images">
-      <!-- Dominant Arch-Shaped Photo -->
-      <div class="home-features-section__image-arch">
-        <img decoding="async" data-placeholder="home-features-image-1" data-context="A warm, sunlit interior of a cozy Brentwood assisted living sitting room featuring soft cream sofas, terracotta accent pillows, a sage green armchair, and large windows with garden views, conveying home-like comfort and safety for senior residents." width="600" height="400" src="/assets/site-home-features-image-1-1780542345826-hloe21.webp?v=1780542348233" alt="Cozy sitting room at Golf View Home with soft natural light and comfortable furnishings" data-element-type="image" data-element-id="img-1780537437752-uebiahv57" style="object-fit: contain; width: auto; height: auto; max-width: 600px; display: block; border-radius: 8px; margin-top: 20px; margin-bottom: 20px; object-position: 50% 50% !important; margin-right: auto !important; margin-left: auto !important;" data-zappy-object-position="50% 50%" data-zappy-zoom="1">
+      <div class="home-features-section__image-main">
+        <img alt="Cozy sitting room at Golf View Home with soft natural light and comfortable furnishings" src="/assets/site-home-features-image-1-1780542345826-hloe21.webp?v=1780542348233" data-placeholder="home-features-image-1" data-context="A warm, sunlit interior of a cozy Brentwood assisted living sitting room featuring soft cream sofas, terracotta accent pillows, a sage green armchair, and large windows with garden views, conveying home-like comfort and safety for senior residents." style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
       </div>
-      <!-- Smaller Rectangular Backplate Peeking -->
-      <div class="home-features-section__image-backplate" aria-hidden="true">
-        <img loading="lazy" decoding="async" data-placeholder="home-features-image-2" data-context="A detailed close-up of a senior care dining area with a wooden table set with warm linens, a vase of fresh flowers, and soft morning light streaming through sheer curtains, emphasizing the family-oriented atmosphere of Golf View Home." width="300" height="200" src="/assets/site-home-features-image-2.webp" alt="" data-element-type="image" data-element-id="img-1780537437752-bkv98uhv6" >
+      <div class="home-features-section__image-secondary">
+        <img alt="" src="/assets/site-home-features-image-2.webp" data-placeholder="home-features-image-2" data-context="A detailed close-up of a senior care dining area with a wooden table set with warm linens, a vase of fresh flowers, and soft morning light streaming through sheer curtains, emphasizing the family-oriented atmosphere of Golf View Home." style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
       </div>
-      <!-- Decorative Botanical Flourish -->
-      <div class="home-features-section__botanical" aria-hidden="true">
-        <svg data-no-icon-edit="true" aria-hidden="true" width="180" height="120" viewBox="0 0 180 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M160 100C140 80 120 60 100 40C80 20 60 0 40 10" stroke="#7A8B66" stroke-width="1.5" stroke-linecap="round" opacity="0.3"></path>
-          <path d="M100 40C90 35 80 30 70 35C60 40 55 50 60 60" stroke="#7A8B66" stroke-width="1.5" stroke-linecap="round" opacity="0.3"></path>
-          <path d="M70 35C65 25 70 15 80 10" stroke="#7A8B66" stroke-width="1.5" stroke-linecap="round" opacity="0.3"></path>
-          <circle cx="80" cy="10" r="3" fill="#7A8B66" opacity="0.3"></circle>
-          <circle cx="60" cy="60" r="2.5" fill="#7A8B66" opacity="0.3"></circle>
-          <circle cx="40" cy="10" r="2" fill="#7A8B66" opacity="0.3"></circle>
-        </svg>
-      </div>
+      <!-- Decorative leaf motif -->
+      <svg class="home-features-section__leaf-motif" data-no-icon-edit="true" aria-hidden="true" width="180" height="160" viewBox="0 0 180 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M90 20C90 20 120 40 140 70C160 100 150 130 140 140C130 150 110 140 100 130C90 120 90 100 90 80C90 100 80 120 70 130C60 140 40 150 30 140C20 130 10 100 30 70C50 40 80 20 90 20Z" stroke="var(--secondary)" stroke-width="1.5" fill="none" opacity="0.25"></path>
+        <path d="M90 20C90 20 70 50 60 70C50 90 60 110 70 120" stroke="var(--secondary)" stroke-width="1.5" fill="none" opacity="0.25"></path>
+      </svg>
     </div>
   </div>
-  
-  <!-- Bottom Divider: Stitched Paper-Edge Curve -->
+
+  <!-- Bottom divider -->
   <div class="home-features-section__divider-wrapper">
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,80 L0,45 Q50,38 100,42 T200,40 Q250,42 300,38 T400,42 Q450,38 500,44 T600,40 Q650,42 700,38 T800,42 Q850,38 900,44 T1000,40 Q1050,42 1100,38 T1200,42 L1200,80 Z" fill="var(--bg-light)"></path>
+      <path d="M0,80 L0,35 Q60,28 120,38 T240,32 Q300,38 360,28 T480,36 Q540,30 600,40 T720,34 Q780,38 840,28 T960,36 Q1020,30 1080,40 T1200,32 L1200,80 Z" fill="var(--bg-light)"></path>
     </svg>
   </div>
 </section>
