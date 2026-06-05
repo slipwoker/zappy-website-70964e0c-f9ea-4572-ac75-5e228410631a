@@ -254,88 +254,96 @@
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
 
-
-
 <style data-zappy-section-v2-css="true">
 /* V2 Regenerated Section CSS */
 .home-features-section {
   position: relative;
-  background: var(--bg-light);
-  color: var(--text-dark);
-  padding: 80px 16px 100px;
   overflow: visible;
+  padding: 80px 20px 80px;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .home-features-section__container {
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
   position: relative;
   z-index: 2;
 }
 
-.home-features-section__header {
-  text-align: center;
-  margin-bottom: 48px;
-  max-width: 720px;
-  margin-left: auto;
-  margin-right: auto;
+/* Content Column */
+.home-features-section__content {
+  flex: 1 1 55%;
+  min-width: 0;
 }
 
 .home-features-section__title {
   font-family: 'Newsreader', serif;
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.3;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
   color: var(--text-dark);
   margin: 0 0 16px 0;
 }
 
 .home-features-section__divider {
   width: 48px;
-  height: 3px;
-  background-color: #C8A96E;
-  margin: 0 auto 24px auto;
+  height: 4px;
+  background-color: var(--primary);
   border-radius: 2px;
+  margin-bottom: 24px;
+  opacity: 0.8;
 }
 
 .home-features-section__intro {
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 16px;
+  font-size: 0.95rem;
   font-weight: 400;
   line-height: 1.7;
   color: var(--text-muted);
-  margin: 0;
-  max-width: none !important;
+  margin: 0 0 40px 0;
+  max-width: 520px;
 }
 
+/* Cards Grid */
 .home-features-section__cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
-  margin-bottom: 64px;
+  max-width: 580px;
 }
 
 .home-features-section__card {
   background: #FFFFFF;
   border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-  padding: 2rem;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  padding: 28px 24px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
   border: 1px solid var(--border-light);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .home-features-section__card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+}
+
+.home-features-section__card--full {
+  grid-column: span 2;
 }
 
 .home-features-section__card-icon {
-  width: 64px;
-  height: 64px;
-  margin: 0 auto 20px auto;
-  border-radius: 50%;
-  background-color: #EDE8DF;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background-color: var(--bg-light);
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -343,125 +351,183 @@
 }
 
 .home-features-section__card-icon svg {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
+}
+
+.home-features-section__card-text {
+  flex: 1;
 }
 
 .home-features-section__card-title {
   font-family: 'Newsreader', serif;
-  font-size: 1.375rem;
+  font-size: 1.3rem;
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 1.3;
   color: var(--text-dark);
-  margin: 0 0 12px 0;
+  margin: 0 0 8px 0;
 }
 
-.home-features-section__card-text {
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 16px;
+.home-features-section__card-desc {
+  font-size: 0.95rem;
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.6;
   color: var(--text-muted);
   margin: 0;
 }
 
-.home-features-section__gallery {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  gap: 24px;
-  align-items: start;
+/* Image Column */
+.home-features-section__images {
+  flex: 1 1 45%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
 }
 
-.home-features-section__gallery-main {
-  border-radius: 24px;
+.home-features-section__image-main {
+  width: 85%;
+  aspect-ratio: 3 / 4;
+  border-radius: 50% 50% 24px 24px;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-  aspect-ratio: 3 / 2;
-  background-color: #EDE8DF;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.12);
+  z-index: 2;
+  position: relative;
 }
 
-.home-features-section__gallery-main img {
+.home-features-section__image-main img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.home-features-section__gallery-secondary {
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
-  aspect-ratio: 1 / 1;
-  background-color: #EDE8DF;
-}
-
-.home-features-section__gallery-secondary img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.home-features-section__leaf-decoration {
+.home-features-section__image-secondary {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 180px;
-  height: 120px;
-  pointer-events: none;
+  bottom: 10px;
+  right: 0;
+  width: 45%;
+  aspect-ratio: 4 / 3;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.15);
   z-index: 1;
-  opacity: 0.15;
-  color: var(--secondary);
+  border: 4px solid var(--bg-light);
 }
 
-.home-features-section__leaf-decoration svg {
+.home-features-section__image-secondary img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Decorative leaf motif */
+.home-features-section__leaf-motif {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 180px;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Bottom Divider */
+.home-features-section__divider-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.home-features-section__divider-wrapper svg {
+  display: block;
   width: 100%;
   height: 100%;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .home-features-section {
-    padding: 60px 16px 80px;
+    padding: 60px 16px 60px;
   }
 
-  .home-features-section__header {
-    margin-bottom: 32px;
+  .home-features-section__container {
+    flex-direction: column-reverse;
+    gap: 40px;
   }
 
   .home-features-section__title {
-    font-size: 1.75rem;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .home-features-section__divider {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-features-section__intro {
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 32px;
   }
 
   .home-features-section__cards {
     grid-template-columns: 1fr !important;
-    gap: 20px;
-    margin-bottom: 48px;
+    max-width: 100%;
+  }
+
+  .home-features-section__card--full {
+    grid-column: span 1;
   }
 
   .home-features-section__card {
-    padding: 1.5rem;
-  }
-
-  .home-features-section__gallery {
-    grid-template-columns: 1fr !important;
+    padding: 20px;
     gap: 16px;
   }
 
-  .home-features-section__gallery-main {
-    aspect-ratio: 4 / 3;
+  .home-features-section__card-icon {
+    width: 44px;
+    height: 44px;
   }
 
-  .home-features-section__gallery-secondary {
-    aspect-ratio: 1 / 1;
-    max-width: 300px;
-    margin: 0 auto;
+  .home-features-section__card-icon svg {
+    width: 24px;
+    height: 24px;
   }
 
-  .home-features-section__leaf-decoration {
+  .home-features-section__images {
+    min-height: 0;
+    width: 100%;
+    justify-content: center;
+    padding: 0 10px;
+  }
+
+  .home-features-section__image-main {
+    width: 75%;
+    aspect-ratio: 3 / 4;
+    border-radius: 50% 50% 20px 20px;
+  }
+
+  .home-features-section__image-secondary {
+    width: 40%;
+    bottom: 0;
+    right: 5%;
+    border-radius: 16px;
+    border-width: 3px;
+  }
+
+  .home-features-section__leaf-motif {
     width: 120px;
-    height: 80px;
-    bottom: 10px;
-    right: 10px;
+    bottom: -15px;
+    right: -10px;
   }
 }
 </style>
@@ -1034,7 +1100,7 @@
   <div class="hero-scrim" aria-hidden="true"></div>
 
   <!-- Frosted glass content card in lower-start quadrant -->
-  <div class="hero-content-card" data-zappy-align-target="true" >
+  <div class="hero-content-card" data-zappy-align-target="true" style="">
     <div class="card-inner">
       <h1 class="hero-headline">Personalized Assisted Living in Brentwood, California</h1>
       <h3 class="hero-subtitle">Warm residential care, safety, and everyday comfort in a home-like environment where seniors thrive with dignity and compassion.</h3>
@@ -1059,55 +1125,83 @@
   </div>
 </section>
 
-<section class="home-features-section" data-layout-spec="Home-features" id="home-features-section">
+<section class="home-features-section" data-layout-spec="Home-features" data-zappy-section="true" id="home-features-section">
   <div class="home-features-section__container">
-    <div class="home-features-section__header">
+    <!-- Content Column -->
+    <div class="home-features-section__content">
       <h2 class="home-features-section__title">Why Families Choose a Home-Like Setting</h2>
       <div class="home-features-section__divider" aria-hidden="true"></div>
-      <p class="home-features-section__intro">At Golf View Home, we believe that true well-being comes from personalized attention and daily support in a familiar, residential environment. Every aspect of our care is designed to nurture independence while providing the comfort and safety your loved one deserves.</p>
+      <p class="home-features-section__intro">At Golf View Home, we believe that personalized attention and daily support thrive best in a warm, familiar environment. Our approach focuses on preserving dignity and independence while providing the gentle assistance your loved one needs to flourish every day.</p>
+      
+      <div class="home-features-section__cards zappy-preserve-css-grid" id="zappy-auto-grid-1780680107853-wx2wjh" data-zappy-auto-grid="true" data-original-item-width="275" data-original-gap="32px" style="display: grid; --zappy-grid-cols: repeat(2, minmax(0, 1fr)); grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch !important;" data-zappy-explicit-columns="true">
+        <!-- Card 1 -->
+        <article class="home-features-section__card home-features-section__card--span" data-grid-item-index="0">
+          <div class="home-features-section__card-icon">
+            <svg data-element-type="icon" data-icon-type="svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="10" r="5" stroke="currentColor" stroke-width="2"></circle>
+              <path d="M6 28c0-5.523 4.477-10 10-10s10 4.477 10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M23 18l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <div class="home-features-section__card-text">
+            <h3 class="home-features-section__card-title">Individualized Assistance</h3>
+            <p class="home-features-section__card-desc">Tailored care plans that adapt to each resident's unique needs, ensuring comfort and safety without compromising independence.</p>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="home-features-section__card home-features-section__card--span" data-grid-item-index="1">
+          <div class="home-features-section__card-icon">
+            <svg data-element-type="icon" data-icon-type="svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 28V14a2 2 0 012-2h8l2-4h4v20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M16 28V8" stroke="currentColor" stroke-width="2"></path>
+              <path d="M22 28V12" stroke="currentColor" stroke-width="2"></path>
+              <circle cx="22" cy="8" r="2" fill="currentColor"></circle>
+            </svg>
+          </div>
+          <div class="home-features-section__card-text">
+            <h3 class="home-features-section__card-title">Safe Residential Environment</h3>
+            <p class="home-features-section__card-desc">A secure, intimate home designed with accessibility in mind, offering peace of mind for families and a familiar setting for residents.</p>
+          </div>
+        </article>
+
+        <!-- Card 3 (spans full width on desktop) -->
+        <article class="home-features-section__card home-features-section__card--full" data-grid-item-index="2">
+          <div class="home-features-section__card-icon">
+            <svg data-element-type="icon" data-icon-type="svg" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 28c6.627 0 12-5.373 12-12S22.627 4 16 4 4 9.373 4 16s5.373 12 12 12z" stroke="currentColor" stroke-width="2"></path>
+              <path d="M10 16c0 3.314 2.686 6 6 6s6-2.686 6-6-2.686-6-6-6-6 2.686-6 6z" stroke="currentColor" stroke-width="2"></path>
+              <circle cx="16" cy="16" r="2" fill="currentColor"></circle>
+            </svg>
+          </div>
+          <div class="home-features-section__card-text">
+            <h3 class="home-features-section__card-title">Warm Companionship</h3>
+            <p class="home-features-section__card-desc">We foster meaningful connections and daily social engagement, creating a family-oriented atmosphere where every resident feels valued and at home.</p>
+          </div>
+        </article>
+      </div>
     </div>
 
-    <div class="home-features-section__cards">
-      <article class="home-features-section__card">
-        <div class="home-features-section__card-icon">
-          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" stroke-width="1.5"></path><path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15 10L17 12L21 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-        </div>
-        <h3 class="home-features-section__card-title">Individualized Assistance</h3>
-        <p class="home-features-section__card-text">Every resident receives a personalized care plan tailored to their unique needs, preferences, and daily routines, ensuring dignity and comfort at every stage.</p>
-      </article>
-
-      <article class="home-features-section__card">
-        <div class="home-features-section__card-icon">
-          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 9.5L12 3L21 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5 8V19C5 19.5523 5.44772 20 6 20H18C18.5523 20 19 19.5523 19 19V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M10 20V14H14V20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-        </div>
-        <h3 class="home-features-section__card-title">Safe Residential Environment</h3>
-        <p class="home-features-section__card-text">Our thoughtfully designed home features accessible layouts, secure outdoor spaces, and 24/7 supervision, offering families genuine peace of mind.</p>
-      </article>
-
-      <article class="home-features-section__card">
-        <div class="home-features-section__card-icon">
-          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 21V19C17 16.7909 15.2091 15 13 15H11C8.79086 15 7 16.7909 7 19V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"></circle><path d="M21 21V19C21 17.1362 19.7252 15.5701 18 15.126" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 21V19C3 17.1362 4.27477 15.5701 6 15.126" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-        </div>
-        <h3 class="home-features-section__card-title">Warm Companionship</h3>
-        <p class="home-features-section__card-text">We cultivate a family-oriented atmosphere where meaningful connections flourish through shared meals, activities, and genuine daily interaction.</p>
-      </article>
-    </div>
-
-    <div class="home-features-section__gallery">
-      <div class="home-features-section__gallery-main">
-        <img data-context="A bright and cozy sitting room in a Brentwood senior care home, featuring comfortable armchairs with plush cushions, warm terracotta and cream textiles, a wooden coffee table with a vase of fresh eucalyptus, soft morning sunlight streaming through plantation shutters, and a calm, residential atmosphere." width="600" height="400" src="/assets/golf-view-home-senior-care-assisted-living-section-Home-features-home-features-image-1.webp" alt="Cozy sitting room with warm morning light at Golf View Home">
+    <!-- Image Column -->
+    <div class="home-features-section__images">
+      <div class="home-features-section__image-main">
+        <div data-zappy-zoom-wrapper="true" data-element-id="img-1780680107829-xx941xkua" data-element-type="image" data-zappy-zoom-wrapper-width="116px" data-zappy-zoom-wrapper-height="86px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 116px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 86px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" data-zappy-card-slot-fill="1"><img alt="Cozy sitting room at Golf View Home with soft natural light and comfortable furnishings" src="/assets/site-home-features-image-1-1780542345826-hloe21.webp?v=1780542348233" data-placeholder="home-features-image-1" data-context="A warm, sunlit interior of a cozy Brentwood assisted living sitting room featuring soft cream sofas, terracotta accent pillows, a sage green armchair, and large windows with garden views, conveying home-like comfort and safety for senior residents." style="object-position: 50% 50%; width: 100.186393% !important; height: 100% !important; object-fit: cover !important; margin: 0px !important; left: -0.093197% !important; top: 0% !important; max-width: none !important; max-height: none !important; display: block !important;" data-zappy-editable-image="true" data-element-type="image" data-element-id="img-1780680107829-xx941xkua" data-zappy-zoom="1"></div>
       </div>
-      <div class="home-features-section__gallery-secondary">
-        <img data-context="A close-up detail of a thoughtfully set dining table in a Brentwood assisted living home, showing artisanal ceramic plates, linen napkins, a small potted herb plant, and soft natural light creating a homelike, nurturing dining experience." width="400" height="400" src="/assets/golf-view-home-senior-care-assisted-living-section-Home-features-home-features-image-2.webp" alt="Homelike dining table detail with fresh herbs at Golf View Home">
+      <div class="home-features-section__image-secondary">
+        <div data-zappy-zoom-wrapper="true" data-element-id="img-1780680107829-63m7uyctw" data-element-type="image" data-zappy-zoom-wrapper-width="147px" data-zappy-zoom-wrapper-height="110px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 147px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 110px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img alt="" src="/assets/site-home-features-image-2-1780680216764-bcmhhf.webp?v=1780680219314" data-placeholder="home-features-image-2" data-context="A detailed close-up of a senior care dining area with a wooden table set with warm linens, a vase of fresh flowers, and soft morning light streaming through sheer curtains, emphasizing the family-oriented atmosphere of Golf View Home." style="width: 100%; height: auto; object-fit: cover; max-width: 100%; display: block; object-position: 50% 50% !important; margin: 0px !important;" data-zappy-editable-image="true" data-element-type="image" data-element-id="img-1780680107829-63m7uyctw" data-zappy-object-position="50% 50%" data-zappy-zoom="1"></div>
       </div>
+      <!-- Decorative leaf motif -->
+      <svg class="home-features-section__leaf-motif" data-no-icon-edit="true" aria-hidden="true" width="180" height="160" viewBox="0 0 180 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M90 20C90 20 120 40 140 70C160 100 150 130 140 140C130 150 110 140 100 130C90 120 90 100 90 80C90 100 80 120 70 130C60 140 40 150 30 140C20 130 10 100 30 70C50 40 80 20 90 20Z" stroke="var(--secondary)" stroke-width="1.5" fill="none" opacity="0.25"></path>
+        <path d="M90 20C90 20 70 50 60 70C50 90 60 110 70 120" stroke="var(--secondary)" stroke-width="1.5" fill="none" opacity="0.25"></path>
+      </svg>
     </div>
   </div>
 
-  <div class="home-features-section__leaf-decoration" aria-hidden="true">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 180 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M160 110C160 110 140 80 120 70C100 60 80 70 70 90C60 110 80 120 100 110C120 100 140 90 160 110Z" stroke="var(--secondary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-      <path d="M120 70C120 70 100 50 80 40C60 30 40 40 30 60C20 80 40 90 60 80C80 70 100 60 120 70Z" stroke="var(--secondary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-      <path d="M120 70C120 70 130 90 135 105" stroke="var(--secondary)" stroke-width="1.5" stroke-linecap="round"></path>
+  <!-- Bottom divider -->
+  <div class="home-features-section__divider-wrapper">
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,80 L0,35 Q60,28 120,38 T240,32 Q300,38 360,28 T480,36 Q540,30 600,40 T720,34 Q780,38 840,28 T960,36 Q1020,30 1080,40 T1200,32 L1200,80 Z" fill="var(--bg-light)"></path>
     </svg>
   </div>
 </section>
@@ -1116,7 +1210,16 @@
 
 
 
-
+<section id="layout-1780648518840" class="layout-section" data-zappy-component="true" style="width: 100%; padding: 60px 0; direction: ltr; position: relative; overflow: hidden; --zappy-bg-overlay: rgba(0, 0, 0, 0.3)" data-component-id="videocard-featured" data-zappy-bg-type="video" data-zappy-bg-color="" data-zappy-bg-image="" data-zappy-bg-overlay-color="#000000" data-zappy-bg-overlay-opacity="30" data-zappy-bg-video-type="generated" data-zappy-bg-video-url="assets/section-video-1780648742351.mp4"><div class="zappy-section-video-bg" style="position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;"><div class="zappy-section-video-overlay" style="position:absolute;inset:0;z-index:1;background:rgba(0, 0, 0, 0.3);pointer-events:none;"></div><video class="zappy-section-video" autoplay="" muted="" loop="" playsinline="" style="position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;transform:translate(-50%, -50%);object-fit:cover;z-index:0;">
+  <source src="/assets/section-video-1780648742351.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video></div>
+  <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 1.5rem; text-align: center; position: relative; z-index: 2">
+  
+  <p style="font-size: 18px; line-height: 1.6; color: rgb(31, 41, 55); opacity: 0.8;">.</p>
+  
+  </div>
+</section>
 
 
 
@@ -1142,7 +1245,7 @@
       <div class="home-gallery-section__item home-gallery-section__item--portrait zappy-grid-item-no-stretch" data-zappy-original-height="1281" style="height: 1281px !important; overflow: hidden !important; align-self: start !important;" data-grid-item-index="4" data-zappy-has-aspect-ratio="true">
         <div data-zappy-zoom-wrapper="true" data-element-id="img-1780537437752-o75vjku7g" data-element-type="image" data-zappy-zoom-wrapper-width="931px" data-zappy-zoom-wrapper-height="1281px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 931px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 1281px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img decoding="async" data-placeholder="home-gallery-image-4" data-context="A peaceful outdoor garden patio at an assisted living residence with comfortable wicker chairs, potted plants, and dappled sunlight through mature trees, inviting quiet relaxation" width="600" height="800" src="/assets/site-home-service-image-4-1780542553262-w6kikt.webp?v=1780542555440" alt="Serene garden patio with wicker chairs and greenery" data-element-type="image" data-element-id="img-1780537437752-o75vjku7g" style="display: block !important; object-position: 50% 50% !important; margin: 0px !important; left: -47.403302% !important; top: -1.5% !important; width: 194.806604% !important; height: 103% !important; max-width: none !important; max-height: none !important; object-fit: cover !important; position: absolute !important;" data-zappy-zoom="1.03" data-zappy-original-width="931" data-zappy-original-height="1281" data-zappy-object-position="50% 50%"></div>
       </div><div class="home-gallery-section__item" data-zappy-original-height="1281" style="background-color: rgb(255, 255, 255) !important; grid-column-start: auto !important; grid-column-end: auto !important; grid-row-start: auto !important; grid-row-end: auto !important;" data-grid-item-index="5">
-        <div data-zappy-zoom-wrapper="true" data-element-id="img-1780537437752-o75vjku7g-add-1780647721550-12zotl" data-element-type="image" data-zappy-zoom-wrapper-width="931px" data-zappy-zoom-wrapper-height="1281px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 931px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 1281px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img decoding="async" data-placeholder="image-placeholder" data-context="A peaceful outdoor garden patio at an assisted living residence with comfortable wicker chairs, potted plants, and dappled sunlight through mature trees, inviting quiet relaxation" width="600" height="800" src="/assets/image-1780647750672-y1i5v4.webp?v=1780647752811" alt="Image placeholder" data-element-type="image" data-element-id="new-grid-img-1780647721550-0-lrkwayq4t" style="display: block !important; object-fit: cover !important; cursor: pointer; object-position: 50% 50% !important; margin: 0px !important; left: -118.177068% !important; top: -1.5% !important; width: 336.354136% !important; height: 103% !important; max-width: none !important; max-height: none !important; position: absolute !important;" data-zappy-zoom="1.03" data-zappy-original-width="931" data-zappy-original-height="1281" data-zappy-object-position="50% 50%" id="new-grid-img-1780647721550-0-lrkwayq4t" data-ai-slot="grid-item-image"></div>
+        <div data-zappy-zoom-wrapper="true" data-element-id="img-1780537437752-o75vjku7g-add-1780647721550-12zotl" data-element-type="image" data-zappy-zoom-wrapper-width="931px" data-zappy-zoom-wrapper-height="1281px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 931px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 1281px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img decoding="async" data-placeholder="image-placeholder" data-context="A peaceful outdoor garden patio at an assisted living residence with comfortable wicker chairs, potted plants, and dappled sunlight through mature trees, inviting quiet relaxation" width="600" height="800" src="/assets/image-1780680582267-pskwod.webp?v=1780680584490" alt="Image placeholder" data-element-type="image" data-element-id="new-grid-img-1780647721550-0-lrkwayq4t" style="cursor: pointer; object-position: 100% 56% !important; display: block !important; object-fit: cover !important; margin: 0px !important; left: 0% !important; top: 0% !important; width: 100% !important; height: 100% !important; max-width: none !important; max-height: none !important; position: absolute !important;" data-zappy-zoom="1" data-zappy-original-width="931" data-zappy-original-height="1281" data-zappy-object-position="100% 56%" id="new-grid-img-1780647721550-0-lrkwayq4t" data-ai-slot="grid-item-image"></div>
       </div>
     </div>
 
