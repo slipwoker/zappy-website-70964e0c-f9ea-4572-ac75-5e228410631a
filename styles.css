@@ -6908,6 +6908,204 @@ div[id*="mic-access-tool-box"] button[class*="reset"] * {
 
 
 
+
+/* Added Component Styles */
+/* ===== Trusted By / Our Clients Section ===== */
+.gvh-trusted-section {
+  background: #f9f7f5;
+  padding: 72px 20px 64px;
+  font-family: system-ui, sans-serif;
+  direction: ltr;
+}
+
+.gvh-trusted-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Section Title */
+.gvh-trusted-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c2c2c;
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.gvh-trusted-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  max-width: 560px;
+  margin: 0 auto 48px;
+  line-height: 1.6;
+}
+
+/* Title accent underline */
+.gvh-trusted-title::after {
+  content: '';
+  display: block;
+  width: 52px;
+  height: 3px;
+  background: var(--primary, #B76B4A);
+  border-radius: 2px;
+  margin: 12px auto 0;
+}
+
+/* Logos Grid — 6 columns */
+.gvh-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px 16px;
+  align-items: start;
+  justify-items: center;
+}
+
+/* Individual logo item */
+.gvh-logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Circular container */
+.gvh-logo-circle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1.5px solid rgba(183, 107, 74, 0.18);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+}
+
+.gvh-logo-circle:hover {
+  box-shadow: 0 6px 20px rgba(183, 107, 74, 0.18);
+  transform: translateY(-3px);
+  border-color: rgba(183, 107, 74, 0.45);
+}
+
+/* Uploaded image logos */
+.gvh-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* SVG placeholder logos */
+.gvh-logo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gvh-svg-logo {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Logo label */
+.gvh-logo-label {
+  font-size: 0.72rem;
+  color: #888;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  max-width: 100px;
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+/* 4 columns on medium tablets */
+@media (max-width: 1024px) {
+  .gvh-logos-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 14px;
+  }
+
+  .gvh-logo-circle {
+    width: 100px;
+    height: 100px;
+    padding: 14px;
+  }
+}
+
+/* 3 columns on small tablets */
+@media (max-width: 768px) {
+  .gvh-trusted-section {
+    padding: 56px 16px 48px;
+  }
+
+  .gvh-trusted-title {
+    font-size: 1.6rem;
+  }
+
+  .gvh-trusted-subtitle {
+    font-size: 0.92rem;
+    margin-bottom: 36px;
+  }
+
+  .gvh-logos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px 12px;
+  }
+
+  .gvh-logo-circle {
+    width: 90px;
+    height: 90px;
+    padding: 12px;
+  }
+
+  .gvh-logo-label {
+    font-size: 0.68rem;
+  }
+}
+
+/* 3 columns on mobile */
+@media (max-width: 480px) {
+  .gvh-trusted-title {
+    font-size: 1.4rem;
+  }
+
+  .gvh-logos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px 10px;
+  }
+
+  .gvh-logo-circle {
+    width: 76px;
+    height: 76px;
+    padding: 10px;
+  }
+
+  .gvh-logo-label {
+    font-size: 0.62rem;
+    max-width: 76px;
+  }
+}
+
+/* 2 columns on very small screens */
+@media (max-width: 360px) {
+  .gvh-logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 10px;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
